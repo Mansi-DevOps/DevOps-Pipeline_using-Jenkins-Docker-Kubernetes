@@ -31,7 +31,7 @@ pipeline {
         stage('Login to DockerHub') {
             steps {
                 script {
-                    docker.withRegistry('https://hub.docker.com/repositories/mansidevops1912', 'dockerhub-creds') {
+                    docker.withRegistry('', 'dockerhub-creds') {
                         echo 'Logged in to DockerHub'
                     }
                 }
