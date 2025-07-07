@@ -41,7 +41,7 @@ pipeline {
         stage('Push Images') {
             steps {
                 script {
-                    docker.withRegistry('https://hub.docker.com/repositories/mansidevops1912', 'dockerhub-creds') {
+                    docker.withRegistry('', 'dockerhub-creds') {
                         docker.image("mansidevops1912/backend:latest").push()
                         docker.image("mansidevops1912/frontend:latest").push()
                     }
