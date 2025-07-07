@@ -5,7 +5,7 @@ metadata:
   name: backend-service
 spec:
   selector:
-    app: backend-service
+    app: backend-deployment
   ports:
     - protocol: TCP
       port: 5000
@@ -22,7 +22,7 @@ metadata:
   name: frontend-service
 spec:
   selector:
-    app: frontend-service
+    app: frontend-deployment
   ports:
     - protocol: TCP
       port: 80
