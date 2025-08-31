@@ -28,16 +28,6 @@ pipeline {
             }
         }
 
-        stage('Login to DockerHub') {
-            steps {
-                script {
-                    docker.withRegistry('', 'dockerhub-creds') {
-                        echo 'Logged in to DockerHub'
-                    }
-                }
-            }
-        }
-
         stage('Push Images') {
             steps {
                 script {
